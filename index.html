@@ -2,35 +2,160 @@
 <html>
 <head>
     <meta charset="utf-8">
-      <title>Frontend development camp 2019</title>
+	<title>Frontend development camp 2019</title>
+	<link rel="shortcut icon" href="/ico/favicon.ico" >
+	<link rel="stylesheet" type="text/css" href="/src/css/reset.css">
+	<link rel="stylesheet" type="text/css" href="/src/css/index.css">
+<!-- 	<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.1.0.min.js"></script>
+	<script type="text/javascript" src=“/src/js/index.js"></script> -->
 </head>
 <body>
 	<div class="wrap">
 		<div class="header">
-			<img src="/src/image/main.png">
-			<ul>
-				<li>concept</li>
-				<li>schedule</li>
-				<li>house</li>
-				<li>map</li>
-				<li>Q&A</li>
+			<div class="logo">
+				<img src="/src/images/logo.png" alt="Frontend Development Camp 2019">	
+			</div>
+			<div class="keyvisualImg">
+				<img src="/src/images/main_chojugiga.png" alt="鳥獣戯画カエル" width="512" height="470">	
+			</div>
+			<div class="eventInfo">
+				<span class="eventDate">2019.5.17<span class="eventDateBrackets">(</span>fri<span class="eventDateBrackets">)</span>  -  5.18<span class="eventDateBrackets">(</span>sat<span class="eventDateBrackets">)</span></span>
+				<div class="meetingPlaceAndTime">
+					<span class="meetingPlace">集合：大平台駅</span>
+					<span class="meetingTime">at 10:40am</span>
+				</div>
+			</div>
+		</div>
+		<ul class="menu">
+			<li><img src="/src/images/menu_about.png" alt="Frontend development campとは"></li>
+			<li><img src="/src/images/menu_contents.png" alt="コンテンツ"></li>
+			<li><a href=""><img src="/src/images/menu_timetable.png" alt="タイムテーブル"></a></li>
+			<li><img src="/src/images/menu_belongings.png" alt="持ち物"></li>
+			<li><img src="/src/images/menu_access.png" alt="アクセス"></li>
+			<li><img src="/src/images/menu_faq.png" alt="faq"></li>
+			<li><img src="/src/images/menu_survey.png" alt="アンケート"></li>
+		</ul>
+		<div class="border"></div>
+		<div class="contentWrap">
+			<div class="contentTitle">
+				<img src="/src/images/menu_about.png" alt="Frontend development campとは">
+			</div>
+			<div class="content">
+				<span>Frontend Development Camp は、フロントエンドエンジニアによるフロントエンドエンジニアのための開発合宿です。<br>
+				2019年度のcampは「初心にカエル」をキーワードとして、未来の仲間のためにwikiとスターターキットをの考案および開発を行います。</span>
+			</div>
+		</div>
+		<div class="border"></div>
+		<div class="contentWrap">
+			<div class="contentTitle">
+				<img src="/src/images/menu_contents.png" alt="コンテンツ">
+			</div>
+			<div class="content">
+				<p>3チームに分かれて作業を行っていただきます。<br>成果物は指定の<a href="https://github.com/AsiaQuestCoLtd/Frontend-dev-CAMP">githubリポジトリ</a>にあげてください。</p>
+				<dl class="toDoOnCamp">
+					<dt>▪️ team-1：AQで今後導入出来るFE基盤の構築</dt>
+					<dd>
+						<span>wikiを準備。</span>
+						（<a href="https://frontendmasters.com/books/front-end-handbook/2019/">想定する成果物</a>）
+					</dd>
+				</dl>
+				<dl class="toDoOnCamp">
+					<dt>▪️ teteam-2：AQにおけるFEのロードマップ作成</dt>
+					<dd>
+						<span>フロントエンドエンジニアとしてのキャリアや、初心者のための学習のロードマップを準備。</span>
+						（<a href="https://frontendmasters.com/books/front-end-handbook/2019/">想定する成果物</a>）
+					</dd>
+				</dl>
+				<dl class="toDoOnCamp">
+					<dt>▪️ team-3：FEスターターキットの作成</dt>
+					<dd>
+						<span>実装をする上で必要最低限必要なもの（babel/webpack/eslint etc.）とそのドキュメントを準備。</span>
+						（<a href="https://frontendmasters.com/books/front-end-handbook/2019/">想定する成果物</a>）
+					</dd>
+				</dl>
+			</span>
+			</div>
+		</div>
+		<div class="border"></div>
+		<div class="contentWrap">
+			<div class="contentTitle">
+				<img src="/src/images/menu_timetable.png" alt="タイムテーブル">
+			</div>
+			<div class="content schedule">
+				<dl>
+					<dt>Day 1</dt>
+					<dd>
+						11:00   運営挨拶<br>
+						11:05   個人ワーク<br>
+						11:15   課題共有<br>
+						11:40   グループ分け＆挨拶<br>
+						12:00	  お昼休憩<br>
+						13:00	  作業開始<br>
+						18:00	  中間発表<br>
+						18:30	  チーム内話し合い<br>
+						18:45	  片付け<br>
+						19:00   宴会<br>
+						21:00	  自由時間
+					</dd>
+				</dl>
+				<dl>
+					<dt>Day 2</dt>
+					<dd>
+						9:00    挨拶運営<br>
+						9:05     作業開始<br>
+						12:00   お昼休憩<br>
+						13:00   成果発表＆FB<br>
+						12:00	  お昼休憩<br>
+						14:45   休憩<br>
+						15:00   DX×FEのプロダクト考案<br>
+						16:35   プロダクト案の共有<br>
+						17:00	  合宿最後の挨拶 <br>
+						17:10	   現地解散
+					</dd>
+				</dl>
+			</div>
+		</div>
+		<div class="border"></div>
+		<div class="contentWrap">
+			<div class="contentTitle">
+				<img src="/src/images/menu_belongings.png" alt="持ち物">
+			</div>
+			<ul class="content">
+				<li><label for="PC"><input type="checkbox" name="belongings" id="PC">PC</label></li>
+				<li><label for="money"><input type="checkbox" name="belongings" id="money">お金</label></li>
+				<li><label for="hp"><input type="checkbox" name="belongings" id="hp">スマホ</label></li>
+				<li><label for="set"><input type="checkbox" name="belongings" id="set">お泊まりセット（石鹸類忘れないでください）</label></li>
+				<li><label for="towel"><input type="checkbox" name="belongings" id="towel">タオル（温泉入る人のみ）</label></li>
+				<li><label for="breakfast"><input type="checkbox" name="belongings" id="breakfast">朝ごはん</label></li>
 			</ul>
 		</div>
-		<div class="content">
-			<p>concept</p>
+		<div class="border"></div>
+		<div class="contentWrap">
+			<div class="contentTitle">
+				<img src="/src/images/menu_access.png" alt="アクセス">
+			</div>
+			<div class="content">
+				<span class="">神奈川県足柄下郡箱根町大平台 UNPACK409-4</span>
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2099.633510405478!2d139.07432569114752!3d35.235959661680255!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6019a24923812339%3A0x531b61d7ce20c4bb!2z44CSMjUwLTA0MDUg56We5aWI5bed55yM6Laz5p-E5LiL6YOh566x5qC555S65aSn5bmz5Y-w77yU77yQ77yZ!5e0!3m2!1sja!2sjp!4v1557698231187!5m2!1sja!2sjp" width=683" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+			</div>
 		</div>
-		<div class="content">
-			<p>schedule</p>
+		<div class="border"></div>
+		<div class="contentWrap">
+			<div class="contentTitle">
+				<img src="/src/images/menu_faq.png" alt="faq">
+			</div>
+			<div class="content">※準備中</div>
 		</div>
-		<div class="content">
-			<p>house</p>
-		</div>
-		<div class="content">
-			<p>map</p>
-		</div>
-		<div class="content">
-			<p>Q&A</p>
+		<div class="border"></div>
+		<div class="contentWrap">
+			<div class="contentTitle">
+				<img src="/src/images/menu_survey.png" alt="アンケート">
+			</div>
+			<div class="content">※準備中</div>
 		</div>
 	</div>
+	<footer>
+		<p></p>
+	</footer>
 </body>
 </html>
