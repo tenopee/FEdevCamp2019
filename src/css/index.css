@@ -1,0 +1,224 @@
+@font-face {
+  font-family: 'Milloyste';
+  src: url('/src/font/Milloyste Font by Keithzo.otf')format('truetype');
+}
+@font-face {
+  font-family: 'irohamaru-Regular';
+  src: url('/src/font/irohamaru-Regular.ttf')format('truetype');
+}
+body {
+	font-family:  Milloyste, irohamaru-Regular;
+	font-size: 18px;
+	color: #333333
+}
+a {
+	position: relative;
+	display: inline-block;
+	transition: .3s;
+	text-decoration: none;
+	line-height: 2;
+}
+a::after {
+	position: absolute;
+	bottom: .3em;
+	left: 0;
+	content: '';
+	width: 100%;
+	height: 1px;
+	background-color: #2ecc71;
+	opacity: 0;
+	transition: .3s;
+}
+a:hover::after {
+	bottom: 0;
+	opacity: 1;
+}
+li {
+	list-style: none;
+}
+.wrap {
+	margin: 20px 0 10px;
+}
+.logo {
+	text-align: center;
+}
+.logo > img {
+	width: 60vw;
+}
+.keyvisualImg {
+	margin-top: 10px;
+	text-align: center;
+}
+.eventInfo {
+	width: 60vw;
+	margin: 25px auto 30px;
+}
+.eventDate {
+	padding-left: 14px;
+	font-size: 26px;
+	letter-spacing: 4px;
+}
+.eventInfo > span{
+	display: inline-block;
+}
+.eventDateBrackets {
+	font-size: 14px;
+	padding: 0 4px;
+}
+.meetingPlaceAndTime {
+	padding-top: 5px;
+	font-size: 18px;
+	border-top: solid 1px #333333;
+}
+.meetingPlace {
+	padding-left: 14px;
+}
+.meetingTime {
+	padding-left: 14px;
+	font-size: 20px;
+	letter-spacing: 2px;
+}
+.menu {
+	display: flex;
+	width: 60vw;
+	margin: 25px auto 0;
+}
+.menu > li {
+	display: flex;
+	width: 100%;
+	justify-content: center;
+	align-items: center;
+	border-right: solid 1px #333333;
+}
+.menu > li:first-child {
+	border-left: solid 1px #333333;
+}
+.menu > li > a,
+.menu > li > a > img {
+	display: block;
+}
+.border {
+	width: 1px;
+	height: 100px;
+	margin: 30px auto 40px;
+	border-left: solid 1px #333333;
+}
+.contentWrap {
+	display: flex;
+	width: 60vw;
+	margin: 50px auto 80px;
+	align-items:  center;
+}
+.contentWrap > .contentTitle {
+	width: 20%;
+	text-align: center;
+}
+.contentWrap > .content {
+	width: 80%;
+	font-family: irohamaru-Regular;
+}
+.contentWrap > .content > span {
+	display: block;
+	margin-bottom: 5px;
+	font-family: irohamaru-Regular;
+}
+.contentWrap > .content > p {
+	margin-bottom: 30px;
+}
+.contentWrap > iframe {
+	text-align: center;
+}
+.toDoOnCamp:not(:last-child) {
+	margin-bottom: 10px;
+}
+.toDoOnCamp > dt {
+	font-weight: bold;
+}
+.toDoOnCamp > dd {
+	padding-left: 20px;
+}
+.schedule {
+	display: flex;
+	justify-content: space-between;
+	padding-left: 30px;
+}
+.accordionbox{
+	width: 50%;
+	background:#FBDBC4;
+	margin: 10px auto 40px;
+	padding: 20px;
+}
+.accordionlist dt{
+    display:block;
+    background: #fff;
+    padding: 20px 0 10px 5px;
+    border-top: 1px solid #DFDFDF;
+}
+.accordionlist dt:first-child{
+    border-top: none !important;
+}
+.accordionlist dt .title{
+    padding-left: 10px;
+	float: left;
+}
+.accordionlist dd{
+    display:none;
+	background: #fff;
+	padding:0 0 20px 15px;
+}
+.accordion_icon,
+.accordion_icon span {
+	display: inline-block;
+	transition: all .4s;
+	box-sizing: border-box;
+}
+.accordion_icon {
+	position: relative;
+	width: 30px;
+	height: 30px;
+	float: right;
+	margin-right: 5px;
+}
+.accordion_icon span {
+	position: absolute;
+    left: 6px;
+    width: 50%;
+	height: 2px;
+    background-color: #F88789;
+	border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-ms-border-radius: 4px;
+	-moz-border-radius: 4px;
+	-o-border-radius: 4px;
+}
+.accordion_icon span:nth-of-type(1) {
+    top: 5px;
+	transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+	-moz-transform: rotate(0deg);
+	-ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+}
+.accordion_icon span:nth-of-type(2) {
+    top: 5px;
+	transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+	-moz-transform: rotate(90deg);
+	-ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+}
+/*＋、－切り替え*/
+.accordion_icon.active span:nth-of-type(1) {
+	display:none;
+}
+.accordion_icon.active span:nth-of-type(2) {
+	top: 5px;
+	transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+	-moz-transform: rotate(180deg);
+	-ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+}
+
+
+
