@@ -2,7 +2,6 @@
   "name": "package.json",
   "version": "1.0.0",
   "devDependencies": {
-    "tar": ">=4.4.2",
     "gulp": "^4.0.2",
     "gulp-plumber": "^1.2.1",
     "gulp-webserver": "^0.9.1",
