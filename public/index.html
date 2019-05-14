@@ -2,57 +2,64 @@
 <html>
 <head>
     <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
 	<title>Frontend development camp 2019</title>
 	<link rel="shortcut icon" href="/ico/favicon.ico" >
 	<link rel="stylesheet" type="text/css" href="/src/css/reset.css">
 	<link rel="stylesheet" type="text/css" href="/src/css/index.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-<!-- 	<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.1.0.min.js"></script>
-	<script type="text/javascript" src=“/src/js/index.js"></script> -->
 </head>
 <body>
-	<div class="wrap">
+	<div class="loadingBeforeWrap jscLoadingBeforeWrap">
+		<div class="loadingContentWrap">
+			<img src="/src/images/loading-before.png" alt="鳥獣戯画カエル" width="412" height="370" class="jscLoadingBefore">
+			<div class="loadingBarWrap">
+				<div class="loadingBar"></div>
+			</div>
+		</div>
+	</div>
+	<div class="loadingAfterWrap jscLoadingAfterWrap dn">
+		<img src="/src/images/main_chojugiga.png" alt="鳥獣戯画カエル" width="412" height="370" class="buruburu">
+	</div>
+	<div class="wrap jscWrap dn">
 		<div class="header">
 			<div class="logo">
-				<img src="/src/images/logo.png" alt="Frontend Development Camp 2019">	
+				<img src="/src/images/logo.png" alt="FrontendDevelopment Camp 2019">
 			</div>
-			<div class="keyvisualImg">
-				<img src="/src/images/main_chojugiga.png" alt="鳥獣戯画カエル" width="412" height="370">	
+			<div class="keyVisualImg">
+				<img src="/src/images/main_chojugiga.png" alt="鳥獣戯画カエル" width="412" height="370">
 			</div>
-			<div class="eventInfo">
-				<span class="eventDate">2019.5.17<span class="eventDateBrackets">(</span>fri<span class="eventDateBrackets">)</span>  -  5.18<span class="eventDateBrackets">(</span>sat<span class="eventDateBrackets">)</span></span>
-				<div class="meetingPlaceAndTime">
-					<span class="meetingPlace">集合：箱根登山鉄道 大平台駅</span>
+			<div class="eventInfoWrap">
+				<div class="eventInfoTop">
+					<span class="eventDate">2019.5.17<span class="eventDateBrackets">(</span>fri<span class="eventDateBrackets">)</span>  -  5.18<span class="eventDateBrackets">(</span>sat<span class="eventDateBrackets">)</span><span class="eventPlace">in HAKONE</span></span>
+				</div>
+				<div class="eventInfoBottom">
+					<span>集合：箱根登山鉄道 大平台駅</span>
 					<span class="meetingTime">at 10:40am</span>
 				</div>
 			</div>
 		</div>
 		<ul class="menu">
-			<li><img src="/src/images/menu_about.png" alt="Frontend development campとは"></li>
-			<li><img src="/src/images/menu_contents.png" alt="コンテンツ"></li>
-			<li><a href=""><img src="/src/images/menu_timetable.png" alt="タイムテーブル"></a></li>
-			<li><img src="/src/images/menu_belongings.png" alt="持ち物"></li>
-			<li><img src="/src/images/menu_access.png" alt="アクセス"></li>
-			<li><img src="/src/images/menu_faq.png" alt="faq"></li>
-			<li><img src="/src/images/menu_survey.png" alt="アンケート"></li>
+			<li><a href="#about"><img src="/src/images/menu_about.png" alt="Frontend development campとは"></a></li>
+			<li><a href="#contents"><img src="/src/images/menu_contents.png" alt="コンテンツ"></a></li>
+			<li><a href="#timetable"><img src="/src/images/menu_timetable.png" alt="タイムテーブル"></a></li>
+			<li><a href="#belongings"><img src="/src/images/menu_belongings.png" alt="持ち物"></a></li>
+			<li><a href="#access"><img src="/src/images/menu_access.png" alt="アクセス"></a></li>
+			<li><a href="#faq"><img src="/src/images/menu_faq.png" alt="faq"></a></li>
 		</ul>
 		<div class="border"></div>
-		<div class="contentWrap">
-			<div class="contentTitle">
-				<img src="/src/images/menu_about.png" alt="Frontend development campとは">
-			</div>
-			<div class="content">
+		<dl class="contentWrap" id="about">
+			<dt class="contentTitle">ABOUT</dt>
+			<dd class="content">
 				<span>Frontend Development Camp は、フロントエンドエンジニアによるフロントエンドエンジニアのための開発合宿です。<br>
 				2019年度のcampは「初心にカエル」をキーワードとして、未来の仲間のためにwikiとスターターキットの考案および開発を行います。</span>
-			</div>
-		</div>
+			</dd>
+		</dl>
 		<div class="border"></div>
-		<div class="contentWrap">
-			<div class="contentTitle">
-				<img src="/src/images/menu_contents.png" alt="コンテンツ">
-			</div>
-			<div class="content">
-				<p>3チームに分かれて作業を行っていただきます。<br>成果物は指定の<a href="https://github.com/AsiaQuestCoLtd/Frontend-dev-CAMP">githubリポジトリ</a>にあげてください。</p>
+		<dl class="contentWrap" id="contents">
+			<dt class="contentTitle">CONTENTS</dt>
+			<dd class="content">
+				<p class="contentDescription">3チームに分かれて作業を行っていただきます。<br>成果物は指定の<a href="https://github.com/AsiaQuestCoLtd/Frontend-dev-CAMP">githubリポジトリ</a>にあげてください。</p>
 				<dl class="toDoOnCamp">
 					<dt>▪️ team-1：AQで今後導入出来るFE基盤の構築</dt>
 					<dd>
@@ -61,7 +68,7 @@
 					</dd>
 				</dl>
 				<dl class="toDoOnCamp">
-					<dt>▪️ teteam-2：AQにおけるFEのロードマップ作成</dt>
+					<dt>▪️ team-2：AQにおけるFEのロードマップ作成</dt>
 					<dd>
 						<span>フロントエンドエンジニアとしてのキャリアや、初心者のための学習のロードマップを準備。</span>
 						（<a href="https://frontendmasters.com/books/front-end-handbook/2019/">想定する成果物</a>）
@@ -74,90 +81,90 @@
 						（<a href="https://frontendmasters.com/books/front-end-handbook/2019/">想定する成果物</a>）
 					</dd>
 				</dl>
-			</span>
-			</div>
-		</div>
+			</dd>
+		</dl>
 		<div class="border"></div>
-		<div class="contentWrap">
-			<div class="contentTitle">
-				<img src="/src/images/menu_timetable.png" alt="タイムテーブル">
-			</div>
-			<div class="content schedule">
+		<dl class="contentWrap" id="timetable">
+			<dt class="contentTitle">TIME TABLE</dt>
+			<dd class="content scheduleWrap">
 				<dl>
-					<dt>Day 1</dt>
-					<dd>
-						11:00   運営挨拶<br>
-						11:05   個人ワーク<br>
-						11:15   課題共有<br>
-						11:40   グループ分け＆挨拶<br>
-						12:00	  お昼休憩<br>
-						13:00	  作業開始<br>
-						18:00	  中間発表<br>
-						18:30	  チーム内話し合い<br>
-						18:45	  片付け<br>
-						19:00   宴会<br>
-						21:00	  自由時間
+					<dt class="date">Day 1</dt>
+					<dd class="schedule">
+						11:00	運営挨拶<br>
+						11:05	個人ワーク<br>
+						11:15	課題共有<br>
+						11:40	グループ分け＆挨拶<br>
+						12:00	お昼休憩<br>
+						13:00	作業開始<br>
+						18:00	中間発表<br>
+						18:30	チーム内話し合い<br>
+						18:45	片付け<br>
+						19:00	宴会<br>
+						21:00	自由時間
 					</dd>
 				</dl>
 				<dl>
-					<dt>Day 2</dt>
-					<dd>
-						9:00    挨拶運営<br>
-						9:05     作業開始<br>
-						12:00   お昼休憩<br>
-						13:00   成果発表＆FB<br>
-						12:00	  お昼休憩<br>
-						14:45   休憩<br>
-						15:00   DX×FEのプロダクト考案<br>
-						16:35   プロダクト案の共有<br>
-						17:00	  合宿最後の挨拶 <br>
-						17:10	   現地解散
+					<dt class="date">Day 2</dt>
+					<dd class="schedule">
+						9:00	挨拶運営<br>
+						9:05	作業開始<br>
+						12:00	お昼休憩<br>
+						13:00	成果発表＆FB<br>
+						12:00	お昼休憩<br>
+						14:45	休憩<br>
+						15:00	DX×FEのプロダクト考案<br>
+						16:35	プロダクト案の共有<br>
+						17:00	合宿最後の挨拶<br>
+						17:10	現地解散
 					</dd>
 				</dl>
-			</div>
-		</div>
+			</dd>
+		</dl>
 		<div class="border"></div>
-		<div class="contentWrap">
-			<div class="contentTitle">
-				<img src="/src/images/menu_belongings.png" alt="持ち物">
-			</div>
-			<ul class="content">
-				<li><label for="PC"><input type="checkbox" name="belongings" id="PC">PC</label></li>
-				<li><label for="money"><input type="checkbox" name="belongings" id="money">お金</label></li>
-				<li><label for="hp"><input type="checkbox" name="belongings" id="hp">スマホ</label></li>
-				<li><label for="set"><input type="checkbox" name="belongings" id="set">お泊まりセット（石鹸類忘れないでください）</label></li>
-				<li><label for="towel"><input type="checkbox" name="belongings" id="towel">タオル（温泉入る人のみ）</label></li>
-				<li><label for="breakfast"><input type="checkbox" name="belongings" id="breakfast">朝ごはん</label></li>
-			</ul>
-		</div>
+		<dl class="contentWrap" id="belongings">
+			<dt class="contentTitle">BELONGINGS</dt>
+			<dd class="content">
+				<ul class="">
+					<li><label for="PC"><input type="checkbox" name="belongings" id="PC">PC</label></li>
+					<li><label for="money"><input type="checkbox" name="belongings" id="money">お金</label></li>
+					<li><label for="hp"><input type="checkbox" name="belongings" id="hp">スマホ</label></li>
+					<li><label for="set"><input type="checkbox" name="belongings" id="set">お泊まりセット（石鹸類忘れないでください）</label></li>
+					<li><label for="towel"><input type="checkbox" name="belongings" id="towel">タオル（温泉入る人のみ）</label></li>
+					<li><label for="breakfast"><input type="checkbox" name="belongings" id="breakfast">朝ごはん</label></li>
+				</ul>
+			</dd>
+		</dl>
 		<div class="border"></div>
-		<div class="contentWrap">
-			<div class="contentTitle">
-				<img src="/src/images/menu_access.png" alt="アクセス">
-			</div>
-			<div class="content">
-				<span class=""><i class="fas fa-home"></i>神奈川県足柄下郡箱根町大平台 UNPACK409-4</span>
-				<span class=""><i class="fa fa-subway" aria-hidden="true"></i>箱根登山鉄道大平台駅　徒歩3分</span>
+		<dl class="contentWrap" id="access">
+			<dt class="contentTitle">ACCESS</dt>
+			<dd class="content">
+				<span class=""><i class="fas fa-home icn"></i> 神奈川県足柄下郡箱根町大平台 UNPACK409-4</span>
+				<span class=""><i class="fa fa-subway icn" aria-hidden="true"></i> 箱根登山鉄道大平台駅　徒歩3分</span>
 				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2099.633510405478!2d139.07432569114752!3d35.235959661680255!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6019a24923812339%3A0x531b61d7ce20c4bb!2z44CSMjUwLTA0MDUg56We5aWI5bed55yM6Laz5p-E5LiL6YOh566x5qC555S65aSn5bmz5Y-w77yU77yQ77yZ!5e0!3m2!1sja!2sjp!4v1557698231187!5m2!1sja!2sjp" width=683" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
-			</div>
-		</div>
+			</dd>
+		</dl>
 		<div class="border"></div>
-		<div class="contentWrap">
-			<div class="contentTitle">
-				<img src="/src/images/menu_faq.png" alt="faq">
-			</div>
-			<div class="content">※準備中</div>
-		</div>
-		<div class="border"></div>
-		<div class="contentWrap">
-			<div class="contentTitle">
-				<img src="/src/images/menu_survey.png" alt="アンケート">
-			</div>
-			<div class="content">※準備中</div>
-		</div>
+		<dl class="contentWrap" id="faq">
+			<dt class="contentTitle">FAQ</dt>
+			<dd class="content">
+				<div class="content">※準備中</div>
+			</dd>
+		</dl>
 	</div>
 	<footer>
 		<p></p>
 	</footer>
+	<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.1.0.min.js"></script>
+<!-- 	<script type="text/javascript" src=“/src/js/index.js"></script> -->
+<script type="text/javascript">
+setTimeout( function () {
+	$(".jscLoadingBeforeWrap").addClass("dn");
+	$(".jscLoadingAfterWrap").removeClass("dn");
+} , 1000);
+setTimeout( function () {
+	$(".jscLoadingAfterWrap").addClass("dn");
+	$(".jscWrap").removeClass("dn");
+} , 2500);
+</script>
 </body>
 </html>

@@ -1,15 +1,30 @@
+@charset "UTF-8";
+
+/*--------------------------------------------------------------------
+ Common
+----------------------------------------------------------------------*/
 @font-face {
-  font-family: 'Milloyste';
-  src: url('/src/font/Milloyste Font by Keithzo.otf')format('truetype');
+	font-family: 'Milloyste';
+	src: url('/src/font/Milloyste Font by Keithzo.otf')format('truetype');
 }
 @font-face {
-  font-family: 'irohamaru-Regular';
-  src: url('/src/font/irohamaru-Regular.ttf')format('truetype');
+	font-family: 'irohamaru-Regular';
+	src: url('/src/font/irohamaru-Regular.ttf')format('truetype');
+}
+html {
+	height: 100%;
 }
 body {
-	font-family:  Milloyste, irohamaru-Regular;
-	font-size: 18px;
-	color: #333333
+	height: 100%;
+	font-family: Milloyste, irohamaru-Regular;
+	font-size: 14px;
+	color: #333333;
+	letter-spacing: 1px;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
 }
 a {
 	position: relative;
@@ -36,52 +51,159 @@ a:hover::after {
 li {
 	list-style: none;
 }
+.dn {
+	display: none !important;
+}
+
+/*--------------------------------------------------------------------
+ loading
+----------------------------------------------------------------------*/
+.loadingBeforeWrap,
+.loadingAfterWrap {
+	height:  100%;
+	width: 100%;
+	display:  flex;
+	justify-content:  center;
+	align-items:  center;
+}
+.loadingContentWrap {
+	text-align:  center;
+}
+.loadingContentWrap > img{
+	/*	max-width: 412px;
+	max-height: 370px;
+	width: 80%;
+	height: 90%;*/
+	width: 80%;
+	height:  80%;
+}
+.loadingAfterWrap > img  {
+	width: 70%;
+	height:  40%;
+}
+.loadingBarWrap {
+  width: 100%;
+  max-width: 300px;
+  margin: 20px auto 0;
+  border: 1px solid #333333;
+  border-radius:  30px;
+}
+.loadingBar {
+  height: 20px;
+  max-width: 300px;
+  margin: 0 auto;
+  position: relative;
+}
+.loadingBar::before {
+  content: '';
+  width: 100%;
+  position: absolute;
+  left: 0;
+  height: 20px;
+  top: 0;
+  z-index: -2;
+  background: #ecf0f1;
+  border-radius: 30px;
+}
+.loadingBar::after {
+  content: '';
+  background: #ED635E;
+  height: 20px;
+  transition: 0.2s;
+  display: block;
+  width: 100%;
+  -webkit-animation: loadingBar-after 1 1s;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  border-radius: 30px;
+}
+@-webkit-keyframes loadingBar-after {
+  0%{
+    width: 0px;
+  }
+  100%{
+    width: 100%;
+  }
+}
+.buruburu {
+    display: inline-block;
+    animation: hurueru .1s  infinite;
+}
+
+@keyframes hurueru {
+    0% {transform: translate(0px, 0px) rotateZ(0deg)}
+    25% {transform: translate(2px, 2px) rotateZ(1deg)}
+    50% {transform: translate(0px, 2px) rotateZ(0deg)}
+    75% {transform: translate(2px, 0px) rotateZ(-1deg)}
+    100% {transform: translate(0px, 0px) rotateZ(0deg)}
+}]
+
+/*--------------------------------------------------------------------
+ PC style
+----------------------------------------------------------------------*/
 .wrap {
 	margin: 20px 0 10px;
+}
+.header {
+	margin-bottom: 20px;
 }
 .logo {
 	text-align: center;
 }
 .logo > img {
-	width: 60vw;
+	width: 100%;
+	max-width: 540px;
 }
-.keyvisualImg {
-	margin-top: 10px;
+.keyVisualImg {
+	margin-top: 15px;
 	text-align: center;
 }
-.eventInfo {
-	width: 60vw;
-	margin: 25px auto 30px;
+.keyVisualImg > img {
+	height: 100%;
+	width: 100%;
+	max-width: 412px;
+	max-height: 370px;
+}
+.eventInfoWrap {
+	width: 80vw;
+	margin: 25px auto 0;
+}
+.eventInfoWrap > span{
+	display: inline-block;
+}
+.eventInfoTop {
+	padding-left: 14px;
 }
 .eventDate {
-	padding-left: 14px;
 	font-size: 26px;
 	letter-spacing: 4px;
-}
-.eventInfo > span{
-	display: inline-block;
 }
 .eventDateBrackets {
 	font-size: 14px;
 	padding: 0 4px;
 }
-.meetingPlaceAndTime {
-	padding-top: 5px;
+.eventPlace {
+	padding-left: 15px;
+	font-size: 20px;
+	letter-spacing: 1px;
+}
+.eventInfoBottom {
+	padding: 5px 0 0 14px;
 	font-size: 18px;
 	border-top: solid 1px #333333;
 }
-.meetingPlace {
-	padding-left: 14px;
-}
 .meetingTime {
-	padding-left: 14px;
+	padding-left: 15px;
 	font-size: 20px;
 	letter-spacing: 2px;
 }
 .menu {
 	display: flex;
-	width: 60vw;
-	margin: 25px auto 0;
+	width: 90vw;
+	margin: 0 auto;
+	justify-content: space-between;
 }
 .menu > li {
 	display: flex;
@@ -97,50 +219,65 @@ li {
 .menu > li > a > img {
 	display: block;
 }
+.contentWrap {
+	display: flex;
+	width: 80vw;
+	margin: 50px auto 80px;
+	align-items:  center;
+}
 .border {
 	width: 1px;
 	height: 100px;
 	margin: 30px auto 40px;
 	border-left: solid 1px #333333;
 }
-.contentWrap {
-	display: flex;
-	width: 60vw;
-	margin: 50px auto 80px;
-	align-items:  center;
-}
-.contentWrap > .contentTitle {
+.contentTitle {
 	width: 20%;
 	text-align: center;
+	font-size: 25px;
+	letter-spacing:  1px;
 }
-.contentWrap > .content {
+.content {
 	width: 80%;
 	font-family: irohamaru-Regular;
 }
-.contentWrap > .content > span {
+.content > span {
 	display: block;
 	margin-bottom: 5px;
 	font-family: irohamaru-Regular;
 }
-.contentWrap > .content > p {
+.contentDescription {
 	margin-bottom: 30px;
 }
-.contentWrap > iframe {
+.content > iframe {
+	width: 100%;
 	text-align: center;
 }
 .toDoOnCamp:not(:last-child) {
 	margin-bottom: 10px;
 }
 .toDoOnCamp > dt {
+	line-height: 2;
 	font-weight: bold;
 }
 .toDoOnCamp > dd {
 	padding-left: 20px;
 }
-.schedule {
+.scheduleWrap {
 	display: flex;
-	justify-content: space-between;
+	justify-content: space-around;
 	padding-left: 30px;
+}
+.date {
+	border-bottom: solid 3px #ED635E;
+	line-height: 1.5;
+}
+.schedule {
+	padding-top: 10px;
+	line-height:  2;
+}
+.icn {
+	font-size: 10px;
 }
 .accordionbox{
 	width: 50%;
@@ -149,20 +286,20 @@ li {
 	padding: 20px;
 }
 .accordionlist dt{
-    display:block;
-    background: #fff;
-    padding: 20px 0 10px 5px;
-    border-top: 1px solid #DFDFDF;
+	display:block;
+	background: #fff;
+	padding: 20px 0 10px 5px;
+	border-top: 1px solid #DFDFDF;
 }
 .accordionlist dt:first-child{
-    border-top: none !important;
+	border-top: none !important;
 }
 .accordionlist dt .title{
-    padding-left: 10px;
+	padding-left: 10px;
 	float: left;
 }
 .accordionlist dd{
-    display:none;
+	display:none;
 	background: #fff;
 	padding:0 0 20px 15px;
 }
@@ -181,10 +318,10 @@ li {
 }
 .accordion_icon span {
 	position: absolute;
-    left: 6px;
-    width: 50%;
+	left: 6px;
+	width: 50%;
 	height: 2px;
-    background-color: #F88789;
+	background-color: #F88789;
 	border-radius: 4px;
 	-webkit-border-radius: 4px;
 	-ms-border-radius: 4px;
@@ -192,21 +329,24 @@ li {
 	-o-border-radius: 4px;
 }
 .accordion_icon span:nth-of-type(1) {
-    top: 5px;
+	top: 5px;
 	transform: rotate(0deg);
-    -webkit-transform: rotate(0deg);
+	-webkit-transform: rotate(0deg);
 	-moz-transform: rotate(0deg);
 	-ms-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
+	-o-transform: rotate(0deg);
 }
 .accordion_icon span:nth-of-type(2) {
-    top: 5px;
+	top: 5px;
 	transform: rotate(90deg);
-    -webkit-transform: rotate(90deg);
+	-webkit-transform: rotate(90deg);
 	-moz-transform: rotate(90deg);
 	-ms-transform: rotate(90deg);
-    -o-transform: rotate(90deg);
+	-o-transform: rotate(90deg);
 }
+
+
+
 /*＋、－切り替え*/
 .accordion_icon.active span:nth-of-type(1) {
 	display:none;
@@ -214,11 +354,79 @@ li {
 .accordion_icon.active span:nth-of-type(2) {
 	top: 5px;
 	transform: rotate(180deg);
-    -webkit-transform: rotate(180deg);
+	-webkit-transform: rotate(180deg);
 	-moz-transform: rotate(180deg);
 	-ms-transform: rotate(180deg);
-    -o-transform: rotate(180deg);
+	-o-transform: rotate(180deg);
 }
 
-
-
+/*--------------------------------------------------------------------
+ SP style
+----------------------------------------------------------------------*/
+@media screen and (max-width: 650px) {
+	body {
+		font-size: 10px;
+	}
+	.logo > img,
+	.keyVisualImg > img {
+		width: 80vw;
+	}
+	.eventInfoWrap {
+		width: 90vw;
+	}
+	.eventDate {
+		font-size: 12px;
+	}
+	.eventDateBrackets {
+		font-size: 8px;
+	}
+	.eventPlace {
+		font-size: 12px;
+	}
+	.eventInfoTop {
+		padding-left: 5px;
+	}
+	.eventInfoBottom {
+		padding-left: 5px;
+		font-size: 12px;
+	}
+	.meetingTime {
+		font-size: 10px;
+	}
+	.menu {
+		width: 90vw;
+	}
+	.menu > li > a >img {
+		height: 8px;
+		width: auto;
+	}
+	.contentWrap {
+		display: block;
+		width: 90vw;
+		margin: 20px auto 20px;
+	}
+	.border {
+		height: 40px;
+		margin: 30px auto;
+	}
+	.contentTitle {
+		width: 100%;
+	}
+	.content {
+		width: 100%;
+		margin-top: 15px;
+	}
+	.content > iframe {
+		height: 50%;
+	}
+	.scheduleWrap {
+		padding-left: 0;
+		justify-content:  space-around;
+	}
+	.contentDescription {
+		margin-bottom: 15px;
+	}
+	.toDoOnCamp > dd {
+		padding-left: 10px;
+	}
+}
