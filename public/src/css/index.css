@@ -70,16 +70,12 @@ li {
 	text-align:  center;
 }
 .loadingContentWrap > img{
-	/*	max-width: 412px;
-	max-height: 370px;
-	width: 80%;
-	height: 90%;*/
 	width: 80%;
 	height:  80%;
 }
-.loadingAfterWrap > img  {
-	width: 70%;
-	height:  40%;
+.loadingAfterWrap > img {
+	width: 85%;
+    height: auto;
 }
 .loadingBarWrap {
   width: 100%;
