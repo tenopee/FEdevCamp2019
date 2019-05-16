@@ -124,13 +124,16 @@
 		<dl class="contentWrap" id="belongings">
 			<dt class="contentTitle">BELONGINGS</dt>
 			<dd class="content">
-				<ul class="">
-					<li><label for="PC"><input type="checkbox" name="belongings" id="PC">PC</label></li>
-					<li><label for="money"><input type="checkbox" name="belongings" id="money">お金</label></li>
-					<li><label for="hp"><input type="checkbox" name="belongings" id="hp">スマホ</label></li>
-					<li><label for="set"><input type="checkbox" name="belongings" id="set">お泊まりセット（石鹸類忘れないでください）</label></li>
-					<li><label for="towel"><input type="checkbox" name="belongings" id="towel">タオル（温泉入る人のみ）</label></li>
-					<li><label for="breakfast"><input type="checkbox" name="belongings" id="breakfast">朝ごはん</label></li>
+				<ul class="belongingsWrap">
+					<li class="belongingsText">忘れ物に注意です😎</li>
+					<li class="belongings"><label><input type="checkbox" name="belongings" class="checkBelongings"><span class="labelBelongings">PCと電源</span></label></li>
+					<li class="belongings"><label><input type="checkbox" name="belongings" class="checkBelongings"><span class="labelBelongings">お金</span></label></li>
+					<li class="belongings"><label><input type="checkbox" name="belongings" class="checkBelongings"><span class="labelBelongings">スマホ</span></label></li>
+					<li class="belongings"><label><input type="checkbox" name="belongings" class="checkBelongings"><span class="labelBelongings">上着</span></label></li>
+					<li class="belongings"><label><input type="checkbox" name="belongings" class="checkBelongings"><span class="labelBelongings">パジャマ</span></label></li>
+					<li class="belongings"><label><input type="checkbox" name="belongings" class="checkBelongings"><span class="labelBelongings">お泊まりセット</span></label></li>
+					<li class="belongings"><label><input type="checkbox" name="belongings" class="checkBelongings"><span class="labelBelongings">やる気</span></label></li>
+					<li class="goodImg jscGoodImg dn"><img src="/src/images/good.png"></li>
 				</ul>
 			</dd>
 		</dl>
@@ -155,16 +158,6 @@
 		<p></p>
 	</footer>
 	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.1.0.min.js"></script>
-<!-- 	<script type="text/javascript" src=“/src/js/index.js"></script> -->
-<script type="text/javascript">
-setTimeout( function () {
-	$(".jscLoadingBeforeWrap").addClass("dn");
-	$(".jscLoadingAfterWrap").removeClass("dn");
-} , 1000);
-setTimeout( function () {
-	$(".jscLoadingAfterWrap").addClass("dn");
-	$(".jscWrap").removeClass("dn");
-} , 2500);
-</script>
+	<script type="text/javascript" src="/src/js/index.js"></script>
 </body>
 </html>
