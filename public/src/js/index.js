@@ -28,3 +28,18 @@ var checked = function () {
     }
   });
 }
+
+$(function() {
+  var pagetop = $('.jscPageTop');
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > 700) {
+      pagetop.fadeIn();
+    } else {
+      pagetop.fadeOut();
+    }
+  });
+  pagetop.on('click', function () {
+    $('body, html').animate({ scrollTop: 0 }, 500);
+    return false;
+  });
+});
